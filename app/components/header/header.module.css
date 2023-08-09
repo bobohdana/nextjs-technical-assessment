@@ -1,0 +1,161 @@
+.root {
+  padding: 40px 100px;
+  justify-content: end;
+  position: fixed;
+  width: 100%;
+  max-width: 1440px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  background-color: #F5F5F5;
+  z-index: 100;
+}
+
+.logo {
+  position: absolute;
+  left: 100px;
+  top: 40px;
+  font-weight: 800;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.navButton {
+  display: none;
+}
+
+.nav {
+  justify-content: space-between;
+  color: #1F1F1F;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.nav p {
+  margin-left: 3rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.nav p[data-current='true'] {
+  font-weight: 500;
+}
+
+.select::after {
+  position: absolute;
+  cursor: pointer;
+  content: '';
+  right: -20px;
+  top: 8px;
+  display: block;
+  width: 14px;
+  height: 8px;
+  background-image: url('../../../public/arrow.svg');
+  background-repeat: no-repeat;
+}
+
+.avatar, .basket {
+  margin-left: 2rem;
+  border: 1px solid #000;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+}
+
+.avatar {
+  margin-left: 3rem;
+}
+
+.avatar img, .basket img {
+  margin-top: 6px;
+}
+
+/* Tablet and Smaller Desktop */
+@media (max-width: 1120px) {
+  .root {
+    padding: 25px 20px;
+    border-bottom: 1px solid #e4e4e4;
+  }
+
+  .logo {
+    left: 20px;
+    top: 30px;
+  }
+
+  .nav p {
+    margin-left: 1rem;
+  }
+  .nav p:nth-child(3) {
+    margin-left: 2rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .open {
+    height: 100%;
+    background-color: #000;
+    color: #fff;
+    align-items: start !important;
+  }
+
+  .logo {
+    font-size: 1.125rem;
+  }
+  
+  .hidden {
+    display: none !important;
+  }
+
+  .navRoot {
+    position: absolute;
+    flex-direction: column;
+    align-items: start !important;
+    top: 108px;
+    left: 20px;
+  }
+
+  .nav {
+    color: #fff;
+    font-size: .875rem;
+    flex-direction: column;
+    align-items: start !important;
+  }
+  
+  .nav p {
+    margin-left: 0;
+    margin-bottom: 26px;
+  }
+  .nav p:nth-child(3) {
+    margin-left: 0;
+  }
+
+  .navButton {
+    display: block;
+  }
+
+  .select::after {
+    filter: invert(1);
+    top: 7px;
+  }
+
+  .buttons {
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+  }
+
+  .avatar, .basket {
+    border: 1px solid #fff;
+    margin-left: 0;
+  }
+
+  .basket {
+    margin-left: 36px;
+  }
+
+  .avatar img, .basket img {
+    filter: invert(1);
+  }
+}

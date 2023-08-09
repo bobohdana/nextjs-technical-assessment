@@ -1,0 +1,31 @@
+.footer {
+  background-color: #000;
+  color: #fff;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: center;
+  padding: 80px 0 44px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 40px;
+}
+
+@media (max-width: 1400px) {
+  .info {
+    flex-wrap: wrap;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .logo {
+    padding: 18px;
+  }
+
+}

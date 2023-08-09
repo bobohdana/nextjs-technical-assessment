@@ -1,0 +1,118 @@
+.root {
+  padding: 45px 45px 0;
+}
+
+.data {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.data > div {
+  width: 47%;
+  margin-bottom: 40px;
+}
+
+.subtitle {
+  font-weight: 700;
+  font-size: .875rem;
+}
+
+.radioGroup {
+  margin: 14px 0 45px 0;
+}
+
+.radioGroup div {
+  margin-right: 19px;
+}
+
+.submit {
+  position: relative;
+  font-weight: 500;
+  padding: 15px 48px;
+  background-color: #000;
+  border-radius: 5px;
+  color: #fff;
+  margin-top: 44px;
+  float: right;
+}
+
+.submit::after {
+  position: absolute;
+  display: block;
+  content: '';
+  background-image: url(../../../public/letter.png);
+  width: 280px;
+  height: 240px;
+  bottom: -216px;
+  left: -60%;
+}
+
+@media (max-width: 1250px) {
+  .radioGroup div {
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .root {
+    padding: 20px;
+  }
+
+  .radioGroup {
+    flex-wrap: wrap;
+    margin: 14px 0 30px 0;
+  }
+  
+  .radioGroup div {
+    width: 40%;
+  }
+
+  .radioGroup div:nth-child(-n+2) {
+    margin-bottom: 25px;
+  }
+
+  .submit {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 950px) {
+  .data > div {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .submit {
+    margin-top: 25px;
+  }
+
+  .submit::after {
+    background-size: 160px 130px;
+    background-repeat: no-repeat;
+    bottom: -226px;
+    left: -10%;
+  }
+}
+
+@media (max-width: 875px) {
+  .submit {
+    width: 100%;
+    float: unset;
+    padding: 0;
+    text-align: center;
+    height: 38px;
+  }
+
+  .submit::after {
+    background-size: 100px 70px;
+    bottom: -235px;
+    left: 30%;
+  }
+}
+
+@media (max-width: 450px) {
+  .root {
+    padding: 10px;
+  }
+}

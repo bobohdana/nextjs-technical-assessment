@@ -1,0 +1,31 @@
+
+
+.label {
+  font-size: .75rem;
+  cursor: pointer;
+}
+
+.tick {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: #E0E0E0;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.cheked {
+  position: relative;
+  /* background-color: #000; */
+}
+.cheked::after {
+  position: absolute;
+  display: block;
+  content: url(../../../public/tick.svg)
+}
+
+.input {
+  display: none;
+}
+
