@@ -6,7 +6,8 @@ import * as Yup from 'yup'
 import styles from './subscribe.module.css'
 import { manrope } from '/app/lib/fonts'
 
-const SignupSchema = Yup.object().shape({
+//creating validation schema for subscription form
+const Schema = Yup.object().shape({
   email: Yup.string()
     .email('Invalid email')
     .required('Required'),
@@ -23,7 +24,7 @@ export default () => {
   return (
     <Formik
       initialValues={{ email: '' }}
-      validationSchema={SignupSchema}
+      validationSchema={Schema}
       onSubmit={handleSubmit}
     >
       <Form className={styles.form}>

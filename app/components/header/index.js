@@ -18,6 +18,7 @@ export default () => {
     setIsNavOpen(!isNavOpen)
   }
 
+  //closing nav menu after clicking on a nav item
   const navClick = () => {
     setIsNavOpen(false)
   }

@@ -2,6 +2,7 @@ import List from 'app/common/list'
 import Subscribe from 'app/components/subscribe'
 
 import styles from './footer.module.css'
+
 import { inter } from 'app/lib/fonts'
 import { LOGO, contacts, company, legal, links } from 'app/lib/utils'
 

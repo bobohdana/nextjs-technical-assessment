@@ -10,6 +10,7 @@ export default (props) => {
   } = props
   const { isSubmitting, errors, touched } = useFormikContext()
 
+  //getting errors for a special field
   const fieldError = getIn(errors, name)
   const showError = getIn(touched, name) && Boolean(fieldError)
 
@@ -24,6 +25,8 @@ export default (props) => {
         {...other}
       />
       <hr className={styles.line} />
+
+      {/* showing errors under the input */}
       {showError && <div className={styles.error}>{fieldError}</div>}
     </div>
   )

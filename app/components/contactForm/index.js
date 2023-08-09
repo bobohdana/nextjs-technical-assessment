@@ -1,5 +1,6 @@
 'use client'
 
+//using Formik library for forms and yup - for validation
 import { Formik, Form } from 'formik'
 import * as Yup from 'yup'
 
@@ -8,7 +9,7 @@ import styles from './contactForm.module.css'
 import TextField from 'app/common/textField'
 import RadioField from 'app/common/radioField'
 
-import { subjects } from '@/app/lib/utils'
+import { subjects } from 'app/lib/utils'
 
 const initialValues = {
   firstName: '',
@@ -18,8 +19,10 @@ const initialValues = {
   subject: '0',
   message: '',
 }
+
+//creating validation schema for a form
 const phoneRegExp = /\(?\+[0-9]{1,3}\)? ?-?[0-9]{1,3} ?-?[0-9]{3,5} ?-?[0-9]{4}( ?-?[0-9]{3})? ?(\w{1,10}\s?\d{1,6})?/
-const SignupSchema = Yup.object().shape({
+const Schema = Yup.object().shape({
   firstName: Yup.string()
     .min(2, 'Too Short!')
     .max(70, 'Too Long!')
@@ -48,7 +51,7 @@ export default () => {
   return (
     <Formik
       initialValues={initialValues}
-      validationSchema={SignupSchema}
+      validationSchema={Schema}
       onSubmit={handleSubmit}
     >
       <Form className={styles.root}>

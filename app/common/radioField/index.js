@@ -3,6 +3,7 @@ import { useFormikContext } from 'formik'
 
 import styles from './radiofield.module.css'
 
+//this is a controlled radio field
 export default (props) => {
   const {
     label,
@@ -11,6 +12,7 @@ export default (props) => {
   } = props
   const { values: { subject }, setFieldValue } = useFormikContext()
 
+  //changing an input value
   const handleChange = () => {
     setFieldValue(name, other.value)
   }
